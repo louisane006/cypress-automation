@@ -3,7 +3,7 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
+        stage('Checkout Code') {
             steps {
                 checkout scm
             }
@@ -11,16 +11,23 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'npm install'
+                bat 'npm ci'
                 bat 'npx cypress install'
             }
         }
 
-        stage('Run Tests') {
+        stage('Run Cypress Tests') {
             steps {
-                bat 'npx cypress run'
+                bat 'npx cypress run --no-color'
             }
         }
 
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: 'cypress/screenshots/**', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'cypress/videos/**', allowEmptyArchive: true
+        }
     }
 }
