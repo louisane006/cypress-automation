@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     stages {
+
         stage('Checkout') {
             steps {
                 checkout scm
@@ -11,20 +12,15 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 bat 'npm install'
+                bat 'npx cypress install'
             }
         }
 
-        stage('Run Cypress Tests') {
+        stage('Run Tests') {
             steps {
                 bat 'npx cypress run'
             }
         }
-    }
 
-    post {
-        always {
-            archiveArtifacts artifacts: 'cypress/screenshots/**', allowEmptyArchive: true
-            archiveArtifacts artifacts: 'cypress/videos/**', allowEmptyArchive: true
-        }
     }
 }
