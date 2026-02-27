@@ -2,32 +2,34 @@ pipeline {
     agent any
 
     stages {
-
-        stage('Checkout Code') {
+        stage('Checkout') {
             steps {
                 checkout scm
             }
         }
 
-        stage('Install Dependencies') {
+        stage('Install') {
             steps {
                 bat 'npm ci'
-                bat 'npx cypress install'
             }
         }
 
-        stage('Run Cypress Tests') {
+        stage('Test') {
             steps {
-                bat 'npx cypress run'
+                bat 'npx cypress run --reporter junit --reporter-options "mochaFile=cypress/results/results.xml"'
             }
         }
-
     }
 
     post {
         always {
+            // Publish JUnit results in Jenkins
+            junit 'cypress/results/results.xml'
+
+            // Archive screenshots/videos
             archiveArtifacts artifacts: 'cypress/screenshots/**', allowEmptyArchive: true
             archiveArtifacts artifacts: 'cypress/videos/**', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'cypress/reports/**', allowEmptyArchive: true
         }
     }
 }
