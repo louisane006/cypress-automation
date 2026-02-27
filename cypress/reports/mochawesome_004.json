@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-02-27T00:06:52.816Z",
+    "end": "2026-02-27T00:06:58.201Z",
+    "duration": 5385,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "791083ad-dc3d-43c2-a9f5-9d6063e9273b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\3_home.cy.js",
+      "file": "cypress\\e2e\\3_home.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d6c63610-e97f-4505-b388-42632025ee02",
+          "title": "Home Page Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should validate home page elements",
+              "fullTitle": "Home Page Tests should validate home page elements",
+              "timedOut": null,
+              "duration": 5009,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('h2', 'Books').should('be.visible');\ncy.get('#new').should('be.visible');\ncy.get('#old').should('be.visible');\ncy.get('.book').should('have.length.greaterThan', 0);",
+              "err": {},
+              "uuid": "a2d7fb31-e427-4e63-949c-13615d491063",
+              "parentUUID": "d6c63610-e97f-4505-b388-42632025ee02",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a2d7fb31-e427-4e63-949c-13615d491063"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5009,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

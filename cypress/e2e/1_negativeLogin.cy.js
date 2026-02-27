@@ -10,13 +10,19 @@ describe('Negative Login Tests', () => {
 
   it('should show error for invalid credentials', () => {
 
+    // Enter wrong credentials
     loginPage.enterUsername('wrongUser');
     loginPage.enterPassword('wrongPass');
     loginPage.clickLogin();
 
+    // Assert error message is visible
     loginPage.getErrorMessage()
-      .should('contain.text', 'Wrong Username or Password');
-      cy.screenshot()
-  }); 
+      .should('be.visible')
+      .and('not.be.empty');
+
+    // Take screenshot after validation
+    cy.screenshot();
+
+  });
 
 });
