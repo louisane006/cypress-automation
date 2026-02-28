@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-02-28T19:54:38.395Z",
+    "end": "2026-02-28T19:54:41.621Z",
+    "duration": 3226,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "33067c0f-f663-4d24-bb09-d9bb3f5776ab",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1_negativeLogin.cy.js",
+      "file": "cypress\\e2e\\1_negativeLogin.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e97f8afe-cde8-4f7f-80bb-a399abacaf63",
+          "title": "Negative Login Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should show error for invalid credentials",
+              "fullTitle": "Negative Login Tests should show error for invalid credentials",
+              "timedOut": null,
+              "duration": 3079,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Enter wrong credentials\nloginPage.enterUsername('wrongUser');\nloginPage.enterPassword('wrongPass');\nloginPage.clickLogin();\n// Assert error message is visible\nloginPage.getErrorMessage().should('be.visible').and('not.be.empty');\n// Take screenshot after validation\ncy.screenshot();",
+              "err": {},
+              "uuid": "83d821d5-728e-4016-8433-4b0348493f14",
+              "parentUUID": "e97f8afe-cde8-4f7f-80bb-a399abacaf63",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "83d821d5-728e-4016-8433-4b0348493f14"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3079,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
