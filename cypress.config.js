@@ -12,7 +12,7 @@ module.exports = defineConfig({
   },
   env: {
     username: 'louisem1609',   // your test username
-    password: '?vVdq?N5' // your test password
+    password: 'tOaK0&@3' // your test password
   },
   allowCypressEnv: false,    // disables insecure Cypress.env() access in browser
   screenshotOnRunFailure: true,

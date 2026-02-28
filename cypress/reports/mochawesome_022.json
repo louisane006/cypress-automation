@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-02-28T17:14:05.460Z",
+    "end": "2026-02-28T17:14:06.860Z",
+    "duration": 1400,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e9f719b5-c0a7-435c-b8c0-550ecf74977f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\5_forgotPassword.cy.js",
+      "file": "cypress\\e2e\\5_forgotPassword.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a47ef0bd-b4d7-4975-ba3d-5255fb40b7a6",
+          "title": "Forgot Password Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should show validation message on forgot password",
+              "fullTitle": "Forgot Password Tests should show validation message on forgot password",
+              "timedOut": null,
+              "duration": 1311,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.clickForgotPassword();\nloginPage.getForgotPasswordValidationMessage();",
+              "err": {},
+              "uuid": "164fc619-f103-4fd5-a3c6-ba8ab77fff9b",
+              "parentUUID": "a47ef0bd-b4d7-4975-ba3d-5255fb40b7a6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "164fc619-f103-4fd5-a3c6-ba8ab77fff9b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1311,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
